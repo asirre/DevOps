@@ -134,7 +134,9 @@ components:
         last_name: Lname
         first_name: Fname
         gradeRecords:
-        - {subject_name: Math, grade: 7}
+          type: array
+          items: 
+           $ref: '#/components/schemas/GradeRecord'
     GradeRecord:
       required:
       - grade
